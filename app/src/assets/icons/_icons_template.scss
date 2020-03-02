@@ -1,0 +1,51 @@
+$icon_font_name:"<%= fontName %>";
+
+@font-face {
+	font-family:$icon_font_name;
+	src: url('<%= fontPath %><%= fontName %>.eot');
+	src: url('<%= fontPath %><%= fontName %>.eot?#iefix') format('eot'),
+		url('<%= fontPath %><%= fontName %>.woff') format('woff'),
+		// url('<%= fontPath %><%= fontName %>.woff2') format('woff2'),
+		url('<%= fontPath %><%= fontName %>.ttf') format('truetype'),
+		url('<%= fontPath %><%= fontName %>.svg#<%= fontName %>') format('svg');
+}
+
+<% _.each(glyphs, function(glyph) { %>%icon-<%= glyph.fileName %>,
+<% }); %>%last_selector {
+
+	font-family: $icon_font_name;
+	line-height: 1;
+	font-weight: 400;
+	font-style: normal;
+	text-transform: none;
+	letter-spacing: normal;
+	speak: none;
+	word-wrap: normal;
+	white-space: nowrap;
+	direction: ltr;
+	vertical-align: middle;
+	/* Support for all WebKit browsers*/
+	-webkit-font-smoothing: antialiased;
+	/* Support for Safari and Chrome*/
+	text-rendering: optimizeLegibility;
+	/* Support for Firefox*/
+	-moz-osx-font-smoothing: grayscale;
+	/* Support for IE*/
+	font-feature-settings: 'liga';	
+}
+
+
+// =============================================================================
+// to use
+// .symbol-box {
+// 		&::before/after{
+// 			@extend %icon-nameIcon;
+// 		}
+// }
+// =============================================================================
+<% _.each(glyphs, function(glyph) { %>
+// @extend %icon-<%= glyph.fileName %>;
+%icon-<%= glyph.fileName %> {
+	content:'\<%= glyph.codePoint %>';
+}
+<% }); %>

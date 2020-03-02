@@ -1,0 +1,37 @@
+// === пути к шрифтам (относительно файла base.scss)
+// потому что все правила @font-face подключены туда
+// =============================================================================
+
+@font-face {
+  font-family: 'Roboto';
+  src: local('Roboto'),
+    url('../../assets/fonts/Roboto-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: local('Roboto'),
+    url('../../assets/fonts/Roboto-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: local('Roboto'),
+    url('../../assets/fonts/Roboto-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+
+// @font-face {
+//   font-family: 'TM Vinograd';
+//   src: local('TM Vinograd'),
+//     url('../../assets/fonts/TM_Vinograd.ttf') format('truetype');
+//   font-weight: 400;
+//   font-style: normal;
+// }

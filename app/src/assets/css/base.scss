@@ -1,0 +1,59 @@
+// для базовой стилизации страниц
+// =============================================================================
+
+@import './utils/_vars.scss';
+@import './utils/_fonts.scss';
+@import './utils/_iconfont.scss';
+
+body {
+  @extend .main-font;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+  background-color: gray;
+  min-height: 100vh;
+  min-width: 320px;
+}
+
+section {
+  padding: 100px 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+h1 {}
+
+h2 {}
+
+h3 {}
+
+h4 {}
+
+a {}
+
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+p,
+fieldset,
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+fieldset {
+  border: none;
+}

@@ -1,0 +1,85 @@
+.main-font, body {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.6;
+  text-transform: none; }
+
+.font-heading-main {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  text-transform: none; }
+
+.font-heading-second {
+  font-family: 'Palatino Linotype', 'Book Antiqua', 'Palatino', serif;
+  font-weight: 400;
+  font-style: italic;
+  text-transform: none; }
+
+.font-content-main {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  font-weight: normal; }
+
+@font-face {
+  font-family: 'Roboto';
+  src: local("Roboto"), url("../../assets/fonts/Roboto-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Roboto';
+  src: local("Roboto"), url("../../assets/fonts/Roboto-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Roboto';
+  src: local("Roboto"), url("../../assets/fonts/Roboto-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal; }
+
+@font-face {
+  font-family: "awesomeBluRex";
+  src: url("../../assets/fonts/awesomeBluRex.eot");
+  src: url("../../assets/fonts/awesomeBluRex.eot?#iefix") format("eot"), url("../../assets/fonts/awesomeBluRex.woff") format("woff"), url("../../assets/fonts/awesomeBluRex.woff2") format("woff2"), url("../../assets/fonts/awesomeBluRex.ttf") format("truetype"), url("../../assets/fonts/awesomeBluRex.svg#awesomeBluRex") format("svg"); }
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+  background-color: gray;
+  min-height: 100vh;
+  min-width: 320px; }
+
+section {
+  padding: 100px 0; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0; }
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+p,
+fieldset,
+figure {
+  margin: 0;
+  padding: 0; }
+
+fieldset {
+  border: none; }
+
+/*# sourceMappingURL=base.css.map */

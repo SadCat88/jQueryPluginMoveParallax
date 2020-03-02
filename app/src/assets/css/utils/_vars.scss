@@ -1,0 +1,63 @@
+// === для подключения переменных и расширений
+// =============================================================================
+
+// ↓ variables =================================================================
+// for example:
+// $mainColor   : #ff0000;
+// to use: color: $mainColor;
+
+
+// ↑ variables =================================================================
+
+// ↓ extends ===================================================================
+// to use: @extend .a11y;
+
+// === accessability
+// .a11y {
+//     outline: none;
+//     box-shadow:
+//         0 0 0 2px $mainColor,
+//         0 0 0 4px darken($mainColor, 10%);
+//     z-index: 20;
+
+// }
+
+
+// === ↓ fonts
+// 
+// === main font
+.main-font {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.6;
+  text-transform: none;
+
+}
+
+.font-heading-main {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  text-transform: none;
+
+}
+
+.font-heading-second {
+  font-family: 'Palatino Linotype', 'Book Antiqua', 'Palatino', serif;
+  font-weight: 400;
+  font-style: italic;
+  text-transform: none;
+}
+
+.font-content-main {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  font-weight: normal;
+}
+
+// === ↑ fonts
+
+// ↑ extends ===================================================================

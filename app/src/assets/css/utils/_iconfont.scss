@@ -1,0 +1,62 @@
+$icon_font_name:"awesomeBluRex";
+
+@font-face {
+	font-family:$icon_font_name;
+	src: url('../../assets/fonts/awesomeBluRex.eot');
+	src: url('../../assets/fonts/awesomeBluRex.eot?#iefix') format('eot'),
+		url('../../assets/fonts/awesomeBluRex.woff') format('woff'),
+		url('../../assets/fonts/awesomeBluRex.woff2') format('woff2'),
+		url('../../assets/fonts/awesomeBluRex.ttf') format('truetype'),
+		url('../../assets/fonts/awesomeBluRex.svg#awesomeBluRex') format('svg');
+}
+
+%icon-chats,
+%icon-megaphone,
+%icon-star,
+%last_selector {
+
+	font-family: $icon_font_name;
+	line-height: 1;
+	font-weight: 400;
+	font-style: normal;
+	text-transform: none;
+	letter-spacing: normal;
+	speak: none;
+	word-wrap: normal;
+	white-space: nowrap;
+	direction: ltr;
+	vertical-align: middle;
+	/* Support for all WebKit browsers*/
+	-webkit-font-smoothing: antialiased;
+	/* Support for Safari and Chrome*/
+	text-rendering: optimizeLegibility;
+	/* Support for Firefox*/
+	-moz-osx-font-smoothing: grayscale;
+	/* Support for IE*/
+	font-feature-settings: 'liga';	
+}
+
+
+// =============================================================================
+// to use
+// .symbol-box {
+// 		&::before/after{
+// 			@extend %icon-nameIcon;
+// 		}
+// }
+// =============================================================================
+
+// @extend %icon-chats;
+%icon-chats {
+	content:'\E001';
+}
+
+// @extend %icon-megaphone;
+%icon-megaphone {
+	content:'\E002';
+}
+
+// @extend %icon-star;
+%icon-star {
+	content:'\E900';
+}
