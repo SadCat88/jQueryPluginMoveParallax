@@ -130,23 +130,23 @@ body {
 body {
   .parallax {
     .layer_1 {
-      width: 65vw;
-      height: 65vh;
+      width: 85vw;
+      height: 85vh;
     }
 
     .layer_2 {
-      width: 70vw;
-      height: 70vh;
+      width: 85vw;
+      height: 85vh;
     }
 
     .layer_3 {
-      width: 75vw;
-      height: 75vh;
+      width: 85vw;
+      height: 85vh;
     }
 
     .layer_4 {
-      width: 80vw;
-      height: 80vh;
+      width: 85vw;
+      height: 85vh;
     }
 
     .layer_5 {
@@ -164,8 +164,10 @@ body {
 // === position
 body {
   .parallax {
+    position: relative;
+
     .parallax-layer {
-      position: relative;
+      position: absolute;
 
       .layer__item {
         position: absolute;

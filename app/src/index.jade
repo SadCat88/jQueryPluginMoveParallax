@@ -14,15 +14,15 @@ html(lang="ru")
 
   body
     .parallax
-      .parallax-layer.layer_1.position_c 
-        .parallax-layer.layer_2.position_c 
-          .parallax-layer.layer_3.position_c 
-            .parallax-layer.layer_4.position_c 
-              .parallax-layer.layer_5.position_c 
-                .layer__item.item_1.position_t_l
-                .layer__item.item_2.position_t_r
-                .layer__item.item_3.position_b_l
-                .layer__item.item_4.position_b_r
+      .parallax-layer.layer_1.position_c(data-perspective-depth="5")
+      .parallax-layer.layer_2.position_c(data-perspective-depth="10")
+      .parallax-layer.layer_3.position_c(data-perspective-depth="50") 
+      .parallax-layer.layer_4.position_c(data-perspective-depth="60") 
+      .parallax-layer.layer_5.position_c(data-perspective-depth="100") 
+        .layer__item.item_1.position_t_l
+        .layer__item.item_2.position_t_r
+        .layer__item.item_3.position_b_l
+        .layer__item.item_4.position_b_r
 
 
     script(src="./assets/vendors/bootstrap/js/jquery-3.4.1.min.js")
