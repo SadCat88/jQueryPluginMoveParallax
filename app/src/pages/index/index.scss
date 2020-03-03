@@ -76,105 +76,126 @@ $textDarkColor: #1F1D3B;
 // =============================================================================
 body {
   min-height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
   @extend .main-gradient;
+}
+
+// === parallax frame
+.parallax {
+  border: 2px solid red;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
 }
 
 // === appearance
 body {
-  .box_border {
-    border: 2px solid black;
-    border-radius: 8px;
+  .parallax {
 
-  }
+    .layer_1,
+    .layer_2,
+    .layer_3,
+    .layer_4,
+    .layer__item {
+      border: 2px solid black;
+      border-radius: 8px;
+    }
 
-  .parallax_layer_1 {
-    background-color: hsla(0, 87%, 73%, 0.25);
-  }
+    .layer_1 {
+      background-color: hsla(0, 87%, 73%, 0.25);
+    }
 
-  .parallax_layer_2 {
-    background-color: hsla(167, 87%, 73%, 0.25);
-  }
+    .layer_2 {
+      background-color: hsla(167, 87%, 73%, 0.25);
+    }
 
-  .parallax_layer_3 {
-    background-color: hsla(123, 87%, 73%, 0.25);
-  }
+    .layer_3 {
+      background-color: hsla(123, 87%, 73%, 0.25);
+    }
 
-  .parallax_layer_4 {
-    background-color: hsla(66, 87%, 73%, 0.25);
-  }
+    .layer_4 {
+      background-color: hsla(66, 87%, 73%, 0.25);
+    }
 
-  .parallax_layer_5 {
-    .box {
-      background-color: hsla(293, 87%, 73%, 0.25);
+    .layer_5 {
+      .layer__item {
+        background-color: hsla(293, 87%, 73%, 0.25);
+      }
     }
   }
-
 }
 
 // === size layers
 body {
+  .parallax {
+    .layer_1 {
+      width: 65vw;
+      height: 65vh;
+    }
 
-  .parallax_layer_1 {
-    width: 65vw;
-    height: 65vh;
-  }
+    .layer_2 {
+      width: 70vw;
+      height: 70vh;
+    }
 
-  .parallax_layer_2 {
-    width: 70vw;
-    height: 70vh;
-  }
+    .layer_3 {
+      width: 75vw;
+      height: 75vh;
+    }
 
-  .parallax_layer_3 {
-    width: 75vw;
-    height: 75vh;
-  }
+    .layer_4 {
+      width: 80vw;
+      height: 80vh;
+    }
 
-  .parallax_layer_4 {
-    width: 80vw;
-    height: 80vh;
-  }
+    .layer_5 {
+      width: 85vw;
+      height: 85vh;
 
-  .parallax_layer_5 {
-    width: 85vw;
-    height: 90vh;
-
-    .box {
-      width: 40vw;
-      height: 40vh;
+      .layer__item {
+        width: 40vw;
+        height: 40vh;
+      }
     }
   }
 }
 
 // === position
 body {
-  .box {
-    position: absolute;
-  }
+  .parallax {
+    .parallax-layer {
+      position: relative;
 
-  .box_c {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
+      .layer__item {
+        position: absolute;
+      }
+    }
 
-  .box_t_l {
-    top: 0;
-    left: 0;
-  }
+    .position_c {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
 
-  .box_t_r {
-    top: 0;
-    right: 0;
-  }
+    .position_t_l {
+      top: 0;
+      left: 0;
+    }
 
-  .box_b_l {
-    bottom: 0;
-    left: 0;
-  }
+    .position_t_r {
+      top: 0;
+      right: 0;
+    }
 
-  .box_b_r {
-    bottom: 0;
-    right: 0;
-  }
+    .position_b_l {
+      bottom: 0;
+      left: 0;
+    }
 
+    .position_b_r {
+      bottom: 0;
+      right: 0;
+    }
+  }
 }

@@ -38,71 +38,85 @@
   color: #5947E4; }
 
 body {
-  min-height: 100vh; }
+  min-height: 100vh;
+  width: 100vw;
+  overflow-x: hidden; }
 
-body .box_border {
+.parallax {
+  border: 2px solid red;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden; }
+
+body .parallax .layer_1,
+body .parallax .layer_2,
+body .parallax .layer_3,
+body .parallax .layer_4,
+body .parallax .layer__item {
   border: 2px solid black;
   border-radius: 8px; }
 
-body .parallax_layer_1 {
+body .parallax .layer_1 {
   background-color: rgba(246, 126, 126, 0.25); }
 
-body .parallax_layer_2 {
+body .parallax .layer_2 {
   background-color: rgba(126, 246, 220, 0.25); }
 
-body .parallax_layer_3 {
+body .parallax .layer_3 {
   background-color: rgba(126, 246, 132, 0.25); }
 
-body .parallax_layer_4 {
+body .parallax .layer_4 {
   background-color: rgba(234, 246, 126, 0.25); }
 
-body .parallax_layer_5 .box {
+body .parallax .layer_5 .layer__item {
   background-color: rgba(232, 126, 246, 0.25); }
 
-body .parallax_layer_1 {
+body .parallax .layer_1 {
   width: 65vw;
   height: 65vh; }
 
-body .parallax_layer_2 {
+body .parallax .layer_2 {
   width: 70vw;
   height: 70vh; }
 
-body .parallax_layer_3 {
+body .parallax .layer_3 {
   width: 75vw;
   height: 75vh; }
 
-body .parallax_layer_4 {
+body .parallax .layer_4 {
   width: 80vw;
   height: 80vh; }
 
-body .parallax_layer_5 {
+body .parallax .layer_5 {
   width: 85vw;
-  height: 90vh; }
-  body .parallax_layer_5 .box {
+  height: 85vh; }
+  body .parallax .layer_5 .layer__item {
     width: 40vw;
     height: 40vh; }
 
-body .box {
-  position: absolute; }
+body .parallax .parallax-layer {
+  position: relative; }
+  body .parallax .parallax-layer .layer__item {
+    position: absolute; }
 
-body .box_c {
+body .parallax .position_c {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%); }
 
-body .box_t_l {
+body .parallax .position_t_l {
   top: 0;
   left: 0; }
 
-body .box_t_r {
+body .parallax .position_t_r {
   top: 0;
   right: 0; }
 
-body .box_b_l {
+body .parallax .position_b_l {
   bottom: 0;
   left: 0; }
 
-body .box_b_r {
+body .parallax .position_b_r {
   bottom: 0;
   right: 0; }
 

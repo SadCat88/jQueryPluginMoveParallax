@@ -75,14 +75,10 @@ jQuery.noConflict();
         const angleA = (180 / Math.PI) * Math.atan2(BC, AB);
         const angleC = 180 - 90 - angleA;
 
-        $this.css(
-          'left',
-          parseInt(elementPosition.left) + deviationFromCenter.X
-        );
-        console.log(
-          'parallaxDraw -> elementPosition.left + deviationFromCenter.X',
-          elementPosition.left + deviationFromCenter.X
-        );
+        $this.css({
+          left: parseInt(elementPosition.left) + deviationFromCenter.X,
+          top: parseInt(elementPosition.top) + deviationFromCenter.Y,
+        });
       }
 
       // === инициализация функций
@@ -91,7 +87,7 @@ jQuery.noConflict();
         .on('load', function() {
           parallaxReady();
         })
-        .on('click', function(event) {
+        .on('mousemove', function(event) {
           getPositionMouse(event);
           parallaxDraw();
         });
@@ -99,5 +95,5 @@ jQuery.noConflict();
   };
 })(jQuery);
 
-jQuery('.parallax_layer_5').mouseMoveParallax();
+jQuery('.parallax-layer').mouseMoveParallax();
 // $('.box').mouseMoveParallax();
