@@ -7,6 +7,7 @@ jQuery.noConflict();
       // === настройки по умолчанию
       const defaults = {
         perspectiveLength: 100,
+        parallaxPower: 0.15,
       };
 
       // === глобальные переменные
@@ -54,6 +55,14 @@ jQuery.noConflict();
 
       // === нарисовать композицию в зависимости от координат курсора
       function parallaxDraw() {
+        // === перевод градусов в радианы
+        function toRad(deg) {
+          return (Math.PI * deg) / 180;
+        }
+
+        // === расчет перспективы (DE) для каждого из слоя
+        // в зависимости от положения мыши (BC) относительно центра композиции
+        //
         //   A
         //   |\
         //   | \
@@ -62,41 +71,35 @@ jQuery.noConflict();
         //   |    \
         //   |_____\ ← mouse deviation from centre
         //   B      C
+        function getPerspective(BC) {
+          // === большой треугольник
+          const AB = defaults.perspectiveLength;
+          const AC = Math.sqrt(BC ** 2 + AB ** 2);
+          const degA = Math.round((180 / Math.PI) * Math.atan2(BC, AB));
+          const degC = 180 - 90 - degA;
 
-        // === перевод градусов в радианы
-        function toRad(deg) {
-          return (Math.PI * deg) / 180;
+          // === малый треугольник
+          const AD = layerPosition.depth;
+
+          const degE = degC;
+          const radE = toRad(degE);
+          const sinE = Math.sin(radE);
+          const tanE = Math.tan(radE);
+
+          const AE = AD / sinE;
+          const DE = AD / tanE;
+
+          return DE;
         }
 
-        const AB = defaults.perspectiveLength;
-        const BC = deviationFromCenter.X;
+        // === расчет отклонения для слоя относительно центра композиции
+        const dX = getPerspective(deviationFromCenter.X);
+        const dY = getPerspective(deviationFromCenter.Y);
 
-        // const AB = 100;
-        // const BC = 70;
-
-        const AC = Math.sqrt(BC ** 2 + AB ** 2);
-        console.log('parallaxDraw -> AC', AC);
-        const degA = Math.round((180 / Math.PI) * Math.atan2(BC, AB));
-        console.log('parallaxDraw -> degA', degA);
-        const degC = 180 - 90 - degA;
-        console.log('parallaxDraw -> degC', degC);
-
-        const AD = layerPosition.depth;
-        console.log('parallaxDraw -> AD', AD);
-        const degE = degC;
-        console.log('parallaxDraw -> degE', degE);
-        const radE = toRad(degE);
-        const sinE = Math.sin(radE);
-        const AE = AD / sinE;
-        console.log('parallaxDraw -> AE', AE);
-        const tanE = Math.tan(radE);
-        console.log('parallaxDraw -> tanE', tanE);
-        const DE = AD / tanE;
-        console.log('parallaxDraw -> DE', DE);
-
+        // === смещение каждого слоя
         $this.css({
-          left: parseInt(layerPosition.left) + DE,
-          // top: parseInt(layerPosition.top) + deviationFromCenter.Y,
+          left: parseInt(layerPosition.left) + dX * defaults.parallaxPower,
+          top: parseInt(layerPosition.top) + dY * defaults.parallaxPower,
         });
       }
 
@@ -106,7 +109,7 @@ jQuery.noConflict();
         .on('load', function() {
           parallaxReady();
         })
-        .on('click', function(event) {
+        .on('mousemove', function(event) {
           getPositionMouse(event);
           parallaxDraw();
         });

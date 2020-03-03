@@ -71,6 +71,12 @@ body .parallax .layer_4 {
 body .parallax .layer_5 .layer__item {
   background-color: rgba(232, 126, 246, 0.25); }
 
+body .parallax .layer_6 .layer__item {
+  background-color: rgba(0, 82, 20, 0.7); }
+
+body .parallax .layer_7 .layer__item {
+  background-color: #bb0000; }
+
 body .parallax .layer_1 {
   width: 85vw;
   height: 85vh; }
@@ -94,25 +100,61 @@ body .parallax .layer_5 {
     width: 40vw;
     height: 40vh; }
 
+body .parallax .layer_6 {
+  width: 85vw;
+  height: 85vh; }
+  body .parallax .layer_6 .layer__item {
+    width: 60vw;
+    height: 15vh; }
+
+body .parallax .layer_7 {
+  width: 85vw;
+  height: 85vh; }
+  body .parallax .layer_7 .layer__item {
+    width: 15px;
+    height: 15px; }
+
 body .parallax {
   position: relative; }
   body .parallax .parallax-layer {
-    position: absolute; }
-    body .parallax .parallax-layer .layer__item {
-      position: absolute; }
-  body .parallax .position_c {
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); }
+    body .parallax .parallax-layer .layer__item {
+      position: absolute; }
+  body .parallax .layer_7 .position_custom {
+    top: 300px;
+    left: 200px; }
   body .parallax .position_t_l {
     top: 0;
     left: 0; }
+  body .parallax .position_t_c {
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0); }
   body .parallax .position_t_r {
     top: 0;
     right: 0; }
+  body .parallax .position_m_l {
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%); }
+  body .parallax .position_m_c {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+  body .parallax .position_m_r {
+    top: 50%;
+    right: 0;
+    transform: translate(0, -50%); }
   body .parallax .position_b_l {
     bottom: 0;
     left: 0; }
+  body .parallax .position_b_c {
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0); }
   body .parallax .position_b_r {
     bottom: 0;
     right: 0; }

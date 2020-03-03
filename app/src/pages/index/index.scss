@@ -123,6 +123,18 @@ body {
         background-color: hsla(293, 87%, 73%, 0.25);
       }
     }
+
+    .layer_6 {
+      .layer__item {
+        background-color: hsla(135, 100%, 16%, 0.7);
+      }
+    }
+
+    .layer_7 {
+      .layer__item {
+        background-color: #bb0000;
+      }
+    }
   }
 }
 
@@ -158,6 +170,26 @@ body {
         height: 40vh;
       }
     }
+
+    .layer_6 {
+      width: 85vw;
+      height: 85vh;
+
+      .layer__item {
+        width: 60vw;
+        height: 15vh;
+      }
+    }
+
+    .layer_7 {
+      width: 85vw;
+      height: 85vh;
+
+      .layer__item {
+        width: 15px;
+        height: 15px;
+      }
+    }
   }
 }
 
@@ -169,20 +201,30 @@ body {
     .parallax-layer {
       position: absolute;
 
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
       .layer__item {
         position: absolute;
       }
     }
 
-    .position_c {
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+    .layer_7 .position_custom {
+      top: 300px;
+      left: 200px;
     }
 
+    // === top =================================================================
     .position_t_l {
       top: 0;
       left: 0;
+    }
+
+    .position_t_c {
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, 0);
     }
 
     .position_t_r {
@@ -190,9 +232,35 @@ body {
       right: 0;
     }
 
+    // === middle ==============================================================
+    .position_m_l {
+      top: 50%;
+      left: 0;
+      transform: translate(0, -50%);
+    }
+
+    .position_m_c {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .position_m_r {
+      top: 50%;
+      right: 0;
+      transform: translate(0, -50%);
+    }
+
+    // === bottom ==============================================================
     .position_b_l {
       bottom: 0;
       left: 0;
+    }
+
+    .position_b_c {
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%, 0);
     }
 
     .position_b_r {
