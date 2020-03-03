@@ -45,6 +45,21 @@ body .box_border {
   border-radius: 8px; }
 
 body .parallax_layer_1 {
+  background-color: rgba(246, 126, 126, 0.25); }
+
+body .parallax_layer_2 {
+  background-color: rgba(126, 246, 220, 0.25); }
+
+body .parallax_layer_3 {
+  background-color: rgba(126, 246, 132, 0.25); }
+
+body .parallax_layer_4 {
+  background-color: rgba(234, 246, 126, 0.25); }
+
+body .parallax_layer_5 .box {
+  background-color: rgba(232, 126, 246, 0.25); }
+
+body .parallax_layer_1 {
   width: 65vw;
   height: 65vh; }
 

@@ -84,7 +84,31 @@ body {
   .box_border {
     border: 2px solid black;
     border-radius: 8px;
+
   }
+
+  .parallax_layer_1 {
+    background-color: hsla(0, 87%, 73%, 0.25);
+  }
+
+  .parallax_layer_2 {
+    background-color: hsla(167, 87%, 73%, 0.25);
+  }
+
+  .parallax_layer_3 {
+    background-color: hsla(123, 87%, 73%, 0.25);
+  }
+
+  .parallax_layer_4 {
+    background-color: hsla(66, 87%, 73%, 0.25);
+  }
+
+  .parallax_layer_5 {
+    .box {
+      background-color: hsla(293, 87%, 73%, 0.25);
+    }
+  }
+
 }
 
 // === size layers
