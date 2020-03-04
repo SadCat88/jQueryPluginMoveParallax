@@ -37,95 +37,19 @@
   text-transform: none;
   color: #5947E4; }
 
-body {
-  min-height: 100vh;
-  width: 100vw;
-  overflow-x: hidden; }
-
 .parallax {
-  border: 2px solid red;
-  height: 100vh;
-  width: 100vw;
   overflow: hidden; }
-
-body .parallax .layer_1,
-body .parallax .layer_2,
-body .parallax .layer_3,
-body .parallax .layer_4,
-body .parallax .layer__item {
-  border: 2px solid black;
-  border-radius: 8px; }
-
-body .parallax .layer_1 {
-  background-color: rgba(246, 126, 126, 0.25); }
-
-body .parallax .layer_2 {
-  background-color: rgba(126, 246, 220, 0.25); }
-
-body .parallax .layer_3 {
-  background-color: rgba(126, 246, 132, 0.25); }
-
-body .parallax .layer_4 {
-  background-color: rgba(234, 246, 126, 0.25); }
-
-body .parallax .layer_5 .layer__item {
-  background-color: rgba(232, 126, 246, 0.25); }
-
-body .parallax .layer_6 .layer__item {
-  background-color: rgba(0, 82, 20, 0.7); }
-
-body .parallax .layer_7 .layer__item {
-  background-color: #bb0000; }
-
-body .parallax .layer_1 {
-  width: 85vw;
-  height: 85vh; }
-
-body .parallax .layer_2 {
-  width: 85vw;
-  height: 85vh; }
-
-body .parallax .layer_3 {
-  width: 85vw;
-  height: 85vh; }
-
-body .parallax .layer_4 {
-  width: 85vw;
-  height: 85vh; }
-
-body .parallax .layer_5 {
-  width: 85vw;
-  height: 85vh; }
-  body .parallax .layer_5 .layer__item {
-    width: 40vw;
-    height: 40vh; }
-
-body .parallax .layer_6 {
-  width: 85vw;
-  height: 85vh; }
-  body .parallax .layer_6 .layer__item {
-    width: 60vw;
-    height: 15vh; }
-
-body .parallax .layer_7 {
-  width: 85vw;
-  height: 85vh; }
-  body .parallax .layer_7 .layer__item {
-    width: 15px;
-    height: 15px; }
 
 body .parallax {
   position: relative; }
   body .parallax .parallax-layer {
     position: absolute;
+    transition-duration: 500ms;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); }
     body .parallax .parallax-layer .layer__item {
       position: absolute; }
-  body .parallax .layer_7 .position_custom {
-    top: 300px;
-    left: 200px; }
   body .parallax .position_t_l {
     top: 0;
     left: 0; }
@@ -158,5 +82,125 @@ body .parallax {
   body .parallax .position_b_r {
     bottom: 0;
     right: 0; }
+
+body {
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden; }
+
+.parallax {
+  width: 1301px;
+  height: 867px;
+  border: 2px solid red; }
+
+.parallax .parallax-layer {
+  width: 1301px;
+  height: 867px; }
+
+.parallax .layer_1 .item_1 {
+  width: 900px;
+  height: 219px; }
+
+.parallax .layer_2 .item_1 {
+  width: 1166px;
+  height: 436px; }
+
+.parallax .layer_3 .item_1 {
+  width: 676px;
+  height: 277px; }
+
+.parallax .layer_4 .item_1 {
+  width: 880px;
+  height: 145px; }
+
+.parallax .layer_5 .item_1 {
+  width: 899px;
+  height: 184px; }
+
+.parallax .layer_6 .item_1 {
+  width: 1721px;
+  height: 302px; }
+
+.parallax .layer_7 .item_1 {
+  width: 1164px;
+  height: 320px; }
+
+.parallax .layer_8 .item_1 {
+  width: 1597px;
+  height: 915px; }
+
+.parallax .layer_9 .item_1 {
+  width: 1480px;
+  height: 227px; }
+
+.parallax .layer_10 .item_1 {
+  width: 1163px;
+  height: 258px; }
+
+.parallax {
+  background: URL("./img/0_layer.png") center center no-repeat; }
+  .parallax .layer_1 .item_1 {
+    background: URL("./img/1_layer.png") center center no-repeat; }
+  .parallax .layer_2 .item_1 {
+    background: URL("./img/2_layer.png") center center no-repeat; }
+  .parallax .layer_3 .item_1 {
+    background: URL("./img/3_layer.png") center center no-repeat; }
+  .parallax .layer_4 .item_1 {
+    background: URL("./img/4_layer.png") center center no-repeat; }
+  .parallax .layer_5 .item_1 {
+    background: URL("./img/5_layer.png") center center no-repeat; }
+  .parallax .layer_6 .item_1 {
+    background: URL("./img/6_layer.png") center center no-repeat; }
+  .parallax .layer_7 .item_1 {
+    background: URL("./img/7_layer.png") center center no-repeat; }
+  .parallax .layer_8 .item_1 {
+    background: URL("./img/8_layer.png") center center no-repeat; }
+  .parallax .layer_9 .item_1 {
+    background: URL("./img/9_layer.png") center center no-repeat; }
+  .parallax .layer_10 .item_1 {
+    background: URL("./img/10_layer.png") center center no-repeat; }
+
+.parallax .layer_1 .item_1 {
+  bottom: 580px;
+  left: 115px; }
+
+.parallax .layer_2 .item_1 {
+  bottom: 205px;
+  left: -235px; }
+
+.parallax .layer_3 .item_1 {
+  bottom: 225px;
+  left: 805px; }
+
+.parallax .layer_4 .item_1 {
+  bottom: 165px;
+  left: 730px; }
+
+.parallax .layer_5 .item_1 {
+  bottom: 165px;
+  left: -190px; }
+
+.parallax .layer_6 .item_1 {
+  bottom: 15px;
+  left: -300px; }
+
+.parallax .layer_7 .item_1 {
+  bottom: -95px;
+  left: -150px; }
+
+.parallax .layer_8 .item_1 {
+  bottom: -115px;
+  left: 180px; }
+
+.parallax .layer_9 .item_1 {
+  bottom: -52px;
+  left: -103px; }
+
+.parallax .layer_10 .item_1 {
+  bottom: -80px;
+  left: 55px; }
 
 /*# sourceMappingURL=index.css.map */

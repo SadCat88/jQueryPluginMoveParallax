@@ -6,8 +6,8 @@ jQuery.noConflict();
     return this.each(function() {
       // === настройки по умолчанию
       const defaults = {
-        perspectiveLength: 100,
-        parallaxPower: 0.15,
+        perspectiveLength: 400,
+        parallaxPower: 0.06,
       };
 
       // === глобальные переменные
@@ -74,7 +74,7 @@ jQuery.noConflict();
         function getPerspective(BC) {
           // === большой треугольник
           const AB = defaults.perspectiveLength;
-          const AC = Math.sqrt(BC ** 2 + AB ** 2);
+          // const AC = Math.sqrt(BC ** 2 + AB ** 2);
           const degA = Math.round((180 / Math.PI) * Math.atan2(BC, AB));
           const degC = 180 - 90 - degA;
 
@@ -83,10 +83,10 @@ jQuery.noConflict();
 
           const degE = degC;
           const radE = toRad(degE);
-          const sinE = Math.sin(radE);
+          // const sinE = Math.sin(radE);
           const tanE = Math.tan(radE);
 
-          const AE = AD / sinE;
+          // const AE = AD / sinE;
           const DE = AD / tanE;
 
           return DE;
@@ -118,4 +118,3 @@ jQuery.noConflict();
 })(jQuery);
 
 jQuery('.parallax-layer').mouseMoveParallax();
-// $('.box').mouseMoveParallax();
